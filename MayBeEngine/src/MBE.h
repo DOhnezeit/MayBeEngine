@@ -4,6 +4,6 @@
 
 #include "MBE/Application.h"
 
-// === Entry Point =============
+// ======== Entry Point ========
 #include "MBE/EntryPoint.h"
 // =============================
