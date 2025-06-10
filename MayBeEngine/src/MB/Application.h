@@ -2,9 +2,9 @@
 
 #include "Core.h"
 
-namespace MBE
+namespace MB
 {
-	class MBE_API Application
+	class MB_API Application
 	{
 	public:
 		Application();

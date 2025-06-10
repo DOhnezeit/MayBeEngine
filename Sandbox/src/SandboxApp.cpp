@@ -1,6 +1,6 @@
-﻿#include <MBE.h>
+﻿#include <MB.h>
 
-class Sandbox : public MBE::Application
+class Sandbox : public MB::Application
 {
 public:
 	Sandbox()
@@ -14,7 +14,7 @@ public:
 	}
 };
 
-MBE::Application* MBE::CreateApplication()
+MB::Application* MB::CreateApplication()
 {
 	return new Sandbox();
 }

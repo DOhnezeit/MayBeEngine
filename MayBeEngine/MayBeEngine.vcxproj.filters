@@ -1,42 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="MB">
+      <UniqueIdentifier>{74745900-6000-880B-C9AE-880BB559880B}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="MB\Events">
+      <UniqueIdentifier>{D815F9AF-4480-AD26-8DBE-5ECCF9678B7B}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\MBE\Core.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\MB.h" />
+    <ClInclude Include="src\MB\Application.h">
+      <Filter>MB</Filter>
     </ClInclude>
-    <ClInclude Include="src\MBE\Application.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\MB\Core.h">
+      <Filter>MB</Filter>
     </ClInclude>
-    <ClInclude Include="src\MBE.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\MB\EntryPoint.h">
+      <Filter>MB</Filter>
     </ClInclude>
-    <ClInclude Include="src\MBE\EntryPoint.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\MB\Events\ApplicationEvent.h">
+      <Filter>MB\Events</Filter>
     </ClInclude>
-    <ClInclude Include="src\MBE\Log.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\MB\Events\Event.h">
+      <Filter>MB\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MB\Events\KeyEvent.h">
+      <Filter>MB\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MB\Events\MouseEvent.h">
+      <Filter>MB\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MB\Log.h">
+      <Filter>MB</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\MBE\Application.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\MB\Application.cpp">
+      <Filter>MB</Filter>
     </ClCompile>
-    <ClCompile Include="src\MBE\Log.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\MB\Log.cpp">
+      <Filter>MB</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
