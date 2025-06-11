@@ -6,6 +6,7 @@
 #include <functional>
 #include <string>
 #include <ostream>
+#include <concepts>
 
 namespace MB
 {
@@ -54,21 +55,28 @@ namespace MB
 		bool m_Handled = false; // If the event has been handled, it will not be processed again
 	};
 
+	template<typename T>
+	concept EventConcept = requires 
+	{
+		std::derived_from<T, Event>;
+		{ T::GetStaticType() } -> std::convertible_to<EventType>;
+	};
+
 	class EventDispatcher
 	{
 		template<typename T>
 		using EventFn = std::function<bool(T&)>;
+
 	public:
 		EventDispatcher(Event& event)
-			: m_Event(event) {
-		}
+			: m_Event(event) {}
 
-		template<typename T>
+		template<EventConcept T>
 		bool Dispatch(EventFn<T> func)
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)&m_Event);
+				m_Event.m_Handled = func(static_cast<T&>(m_Event));
 				return true;
 			}
 			return false;
