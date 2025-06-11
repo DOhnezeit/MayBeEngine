@@ -5,8 +5,6 @@
 #pragma warning(disable: 4251)
 #endif
 
-#include <memory>  
-
 #include "Core.h"  
 #include "spdlog/spdlog.h" 
 

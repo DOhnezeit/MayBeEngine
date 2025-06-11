@@ -2,12 +2,6 @@
 
 #include "MB/Core.h"
 
-#include <string>
-#include <functional>
-#include <string>
-#include <ostream>
-#include <concepts>
-
 namespace MB
 {
 	// Currently, events are blocking, meaning that events must be handled immediately

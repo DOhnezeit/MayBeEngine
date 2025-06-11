@@ -26,10 +26,13 @@ project "MayBeEngine"
         "%{prj.name}/src/**.cpp"
     }
 
+    pchheader "MBpch.h"
+    pchsource "MayBeEngine/src/MBpch.cpp"
+
     includedirs
     {
-	IncludeDir["spdlog"],
-	IncludeDir["MB"]
+	    IncludeDir["spdlog"],
+    	IncludeDir["MB"]
     }
 
     filter "system:windows"
@@ -54,12 +57,12 @@ project "MayBeEngine"
         runtime "Debug"
 
     filter "configurations:Release"
-        defines { "MB_RELEASE" }
-        optimize "On"
+	defines { "MB_RELEASE" }
+	optimize "On"
 
     filter "configurations:Dist"
-        defines { "MB_DIST" }
-        optimize "On"
+	defines { "MB_DIST" }
+	optimize "On"
 
 project "Sandbox"
     location "Sandbox"
